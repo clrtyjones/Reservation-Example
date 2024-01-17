@@ -1,0 +1,41 @@
+$primary-color: #123456;
+$gap-size: 14px;
+$border-radius-size: 8px;
+
+.results {
+  display: grid;
+  column-gap: $gap-size;
+  row-gap: $gap-size;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+
+  @media (min-width: 500px) and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 499px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+input[type="text"] {
+  border: solid 1px $primary-color;
+  padding: 10px;
+  border-radius: $border-radius-size;
+  margin-right: 4px;
+  display: inline-block;
+  width: 30%;
+
+  @media (min-width: 500px) and (max-width: 768px) {
+    width: 70%;
+  }
+}
+
+button {
+  padding: 10px;
+  border: solid 1px $primary-color;
+  background: $primary-color;
+  color: white;
+  border-radius: $border-radius-size;
+}
